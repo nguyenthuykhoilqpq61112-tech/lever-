@@ -120,4 +120,5 @@ python3 lever-gaokao/scripts/ledger_tool.py validate-candidate-table candidates.
 
 ## 贡献
 
-欢迎公益方向的规则补充、信源核验、文档改进、脚本修复和压力测试。请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。不要提交任何真实考生隐私信息。
+- 欢迎公益方向的规则补充、信源核验、文档改进、脚本修复和压力测试。
+- 请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。不要提交任何真实考生隐私信息。
