@@ -7,11 +7,52 @@
 > **重要边界**  
 > 本项目不是全国院校数据库，不是已回测校准的录取概率模型，也不替代省级考试院、高校招生网和官方招生章程。没有完整官方招生计划、历史位次、专业组变化和模型回测时，只能输出候选发现、风险审计、情景模拟、概率区间和待核验事项。
 
+## 项目缘起
+
+这个项目来自一次真实的 2025 年高考志愿填报实践：家中亲友的小孩处在选择空间并不宽裕的分数段，省内热门路径竞争激烈，简单随大流很容易只得到低杠杆结果。于是我围绕她的真实分数、位次、选科、家庭约束和长期发展可能性，设计了一套 AI Agent 辅助框架，让 Agent 从数百个候选院校和专业路径里反复扩展、筛选、降级、复核，寻找那些基本盘可接受、存在结构性“捡漏”特征、未来可能被重新定价的人生机会。
+
+最终方案没有依赖“神预测”，而是遵循一个朴素原则：先守住可录取和可接受底线，再寻找非对称上行空间。该考生最终进入了一所当时分数段内相对稳妥、但具备区域位置、主管部门和平台变化预期的高校；入学不到一年，学校完成合并更名，成为中央部委直属高校。这个结果不是可复制的录取承诺，却证明了一个方向：在信息不充分、机会很窄的情况下，AI Agent 可以帮助家庭把候选池、证据、风险和长期杠杆系统化，而不是只凭印象、焦虑和热门叙事做决定。
+
 ## 给谁用
 
 - 高考考生、家长、老师、公益志愿填报协助者。
 - 已经在使用 AI Agent 工具的人，例如 Codex、Claude Code、Cursor、Kimi Code、OpenCode、Gemini CLI、Qwen Code、Aider、Cline/Roo Code、Continue、Zed/Zcoe、Windsurf、GitHub Copilot Coding Agent、Trae 等。
 - 希望用证据和结构化判断辅助志愿填报，而不是被热门城市、热门专业、短视频叙事或“唯一正确答案”牵着走的人。
+
+## 小白用户怎么选工具
+
+你不需要一开始就理解所有 Agent 工具。先判断自己属于哪种情况：
+
+### 方案 A：能正常访问国际模型和开发工具
+
+优先使用能读取本地文件、执行命令、按需加载 reference 的 Agent 工具：
+
+- [Codex](https://developers.openai.com/codex/)：最适合直接使用本仓库的 Skill 结构。
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)：适合在终端中读取仓库、修改文档和执行脚本。
+- [Cursor](https://cursor.com/)、[Windsurf](https://windsurf.com/)、[GitHub Copilot Coding Agent](https://docs.github.com/en/copilot)：适合图形化 IDE 用户。
+- [OpenCode](https://opencode.ai/)、[Aider](https://aider.chat/)、[Cline/Roo Code](https://cline.bot/)、[Continue](https://www.continue.dev/)：适合愿意配置模型 API 的用户。
+
+### 方案 B：中国大陆地区没有稳定网络代理
+
+可以换成支持读取本地仓库、执行工具或接入自定义模型 API 的国产/开源 Agent 工具，或者把本项目当作“方法论 + 提示词 + 表格规范”使用：
+
+- 优先选择支持本地文件读取、终端命令、工具调用、规则文件或知识库的工具。
+- 如果工具不认识 Codex Skill，也可以让它先读取 [SKILL.md](life-leverage-college-admission/SKILL.md)，再按路由读取 `references/`。
+- 国内模型可优先考虑 GLM、DeepSeek、Kimi、Qwen 等提供的 API 或平台能力。常见做法是选择支持 OpenAI-compatible 或 Anthropic-compatible 接口的 Agent 工具，然后配置 `base_url`、`api_key` 和 `model`。
+- 可参考的官方文档入口：[GLM / Z.AI](https://docs.z.ai/devpack/quick-start)、[DeepSeek API](https://api-docs.deepseek.com/)、[Kimi API](https://platform.kimi.ai/docs/api/overview)、[Qwen API](https://qwen.ai/apiplatform)、[Qwen Code](https://qwenlm.github.io/qwen-code-docs/en/users/configuration/auth/)。
+- 如果当前 Codex、Claude Code 或某个 IDE 版本不支持自定义模型服务，不要强行改 Skill。更稳妥的做法是换用 OpenCode、Aider、Continue、Cline/Roo Code、Qwen Code 等支持自定义模型提供方的工具来读取本仓库。
+- 如果只能使用网页版聊天，也可以复制 `SKILL.md` 的核心定位、[引导式问诊](life-leverage-college-admission/references/guided-intake.md) 和 [输入输出规范](life-leverage-college-admission/references/input-output-schema.md) 的相关片段，让模型先问诊再分析。缺点是不能自动运行脚本，也更容易遗漏候选池 ledger。
+
+### 方案 C：只想先试一下
+
+最简单的做法：
+
+1. 准备“省份、年份、选科/科类、分数、位次、批次、预算、不可接受项、学生本人偏好、家庭约束”。
+2. 把这些信息交给你正在使用的 Agent。
+3. 要求它读取 `life-leverage-college-admission/SKILL.md`，先补问缺失信息，不要直接给唯一答案。
+4. 等有候选表后，再考虑使用 `ledger_tool.py` 做机械校验。
+
+判断一个工具是否适合本项目，只看三点：能否读取本地文件，能否按需打开 `references/`，能否执行 Python 脚本。三点都具备最好；只能聊天也能用，但只能做轻量咨询。
 
 ## 立即使用
 
@@ -141,4 +182,3 @@ gaokao, college-admission, china-education, ai-agent, agent-skill, codex, claude
 ## 贡献
 
 欢迎公益方向的规则补充、信源核验、文档改进、脚本修复和压力测试。请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。不要提交任何真实考生隐私信息。
-
