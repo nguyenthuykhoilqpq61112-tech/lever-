@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="card hero">
+    <text class="badge">公益 · 非商用 · 需官方复核</text>
+    <view class="h1">人生杠杆・高考志愿填报助手</view>
+    <view class="p intro">先问清孩子和家庭真实情况，再把候选学校、专业、风险与待核验资料整理成可讨论的底稿。</view>
+    <button class="primary-button" bindtap="goIntake">开始问诊</button>
+    <button class="secondary-button" bindtap="goDisclaimer">查看使用边界</button>
+  </view>
+
+  <view class="card">
+    <view class="h2">它能帮你做什么</view>
+    <view class="li">• 补齐省份、年份、位次、选科、批次、预算和不可接受项。</view>
+    <view class="li">• 提醒热门城市、热门专业和单一经验可能带来的竞争成本。</view>
+    <view class="li">• 形成低估机会、稳妥选择、保底方案和待官方核验清单。</view>
+  </view>
+
+  <view class="card warning">
+    <view class="h2">重要提醒</view>
+    <view class="p">小程序只提供问诊入口和方案整理框架，不替代省级考试院、高校招生网、招生章程和官方志愿系统。</view>
+  </view>
+</view>

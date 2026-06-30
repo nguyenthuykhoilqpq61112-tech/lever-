@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/intake/intake",
+    "pages/disclaimer/disclaimer",
+    "pages/ai/ai"
+  ],
+  "window": {
+    "navigationBarTitleText": "人生杠杆・高考志愿",
+    "navigationBarBackgroundColor": "#13294b",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f6f8fb"
+  },
+  "tabBar": {
+    "color": "#667085",
+    "selectedColor": "#13294b",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/intake/intake",
+        "text": "问诊"
+      },
+      {
+        "pagePath": "pages/disclaimer/disclaimer",
+        "text": "边界"
+      },
+      {
+        "pagePath": "pages/ai/ai",
+        "text": "AI"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
