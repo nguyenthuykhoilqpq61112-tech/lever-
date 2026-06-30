@@ -101,6 +101,7 @@ python3 lever-gaokao/scripts/ledger_tool.py validate-candidate-table candidates.
 miniprogram/
 ```
 
+使用微信开发者工具导入 `miniprogram/` 目录即可本地预览；完整上线步骤见 [微信小程序部署指南](docs/miniprogram-deployment.md)。正式发布前请结合主体资质、隐私政策和微信平台规范补齐发布材料。
 使用微信开发者工具导入 `miniprogram/` 目录即可本地预览；正式发布前请结合主体资质、隐私政策和微信平台规范补齐发布材料。
 
 ## 没有网络代理怎么办

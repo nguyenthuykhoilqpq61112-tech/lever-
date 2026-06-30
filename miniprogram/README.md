@@ -14,6 +14,7 @@
 1. 使用微信开发者工具导入本目录 `miniprogram/`。
 2. AppID 可先使用游客模式或替换 `project.config.json` 中的 `appid`。
 3. 预览前请结合正式主体资质、隐私政策和微信平台规范补齐发布材料。
+4. 如需上线，请按仓库根目录的 [微信小程序部署指南](../docs/miniprogram-deployment.md) 完成 AppID 替换、上传、提审和发布。
 
 ## 注意
 
