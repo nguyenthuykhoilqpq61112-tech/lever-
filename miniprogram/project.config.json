@@ -11,4 +11,5 @@
     "minified": true
   },
   "cloudfunctionRoot": "../cloudfunctions/"
+  }
 }

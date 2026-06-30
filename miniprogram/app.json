@@ -4,6 +4,7 @@
     "pages/intake/intake",
     "pages/disclaimer/disclaimer",
     "pages/ai/ai"
+    "pages/disclaimer/disclaimer"
   ],
   "window": {
     "navigationBarTitleText": "人生杠杆・高考志愿",
@@ -24,6 +25,7 @@
       {
         "pagePath": "pages/intake/intake",
         "text": "咨询"
+        "text": "问诊"
       },
       {
         "pagePath": "pages/disclaimer/disclaimer",

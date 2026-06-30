@@ -13,5 +13,8 @@ App({
     appName: 'Lever-GaoKao',
     intakeStorageKey: 'leverGaokaoIntakeDraft',
     cloudEnvId: ''
+  globalData: {
+    appName: 'Lever-GaoKao',
+    intakeStorageKey: 'leverGaokaoIntakeDraft'
   }
 })

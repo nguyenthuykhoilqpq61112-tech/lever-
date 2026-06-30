@@ -1,6 +1,7 @@
 <view class="container">
   <view class="card">
     <view class="h2">基础咨询</view>
+    <view class="h2">基础问诊</view>
     <view class="p">请先整理这些信息。保存后可复制给 Agent、老师或公益咨询志愿者继续分析。</view>
   </view>
 
