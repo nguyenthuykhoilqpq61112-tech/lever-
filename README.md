@@ -92,6 +92,17 @@ python3 lever-gaokao/scripts/ledger_tool.py validate-candidate-table candidates.
 
 脚本只检查表格字段、状态和明显硬限制，不判断学校好坏，也不预测录取概率。
 
+
+### 4. 低门槛小程序入口
+
+仓库已提供一个轻量微信小程序壳工程，适合把问诊资料收集、使用边界说明和提示词复制交给不熟悉 Agent 工具的用户。
+
+```text
+miniprogram/
+```
+
+使用微信开发者工具导入 `miniprogram/` 目录即可本地预览；完整上线步骤见 [微信小程序部署指南](docs/miniprogram-deployment.md)。正式发布前请结合主体资质、隐私政策和微信平台规范补齐发布材料。
+
 ## 没有网络代理怎么办
 
 可以使用支持本地文件读取、工具调用或自定义模型 API 的国产/开源 Agent 工具。国内模型可考虑 GLM、DeepSeek、Kimi、Qwen 等。常见做法是选择支持 OpenAI-compatible 接口的工具，再配置 `base_url`、`api_key` 和 `model`。
