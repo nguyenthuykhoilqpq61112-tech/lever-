@@ -2,6 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/intake/intake",
+    "pages/disclaimer/disclaimer",
+    "pages/ai/ai"
     "pages/disclaimer/disclaimer"
   ],
   "window": {
@@ -22,11 +24,16 @@
       },
       {
         "pagePath": "pages/intake/intake",
+        "text": "咨询"
         "text": "问诊"
       },
       {
         "pagePath": "pages/disclaimer/disclaimer",
         "text": "边界"
+      },
+      {
+        "pagePath": "pages/ai/ai",
+        "text": "AI"
       }
     ]
   },
