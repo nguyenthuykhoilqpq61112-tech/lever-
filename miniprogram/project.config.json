@@ -1,0 +1,13 @@
+{
+  "description": "Lever-GaoKao 高考志愿填报辅助微信小程序",
+  "appid": "touristappid",
+  "projectname": "lever-gaokao-miniprogram",
+  "miniprogramRoot": "./",
+  "compileType": "miniprogram",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true
+  }
+}

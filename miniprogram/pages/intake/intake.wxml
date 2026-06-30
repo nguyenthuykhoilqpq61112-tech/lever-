@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="card">
+    <view class="h2">基础问诊</view>
+    <view class="p">请先整理这些信息。保存后可复制给 Agent、老师或公益咨询志愿者继续分析。</view>
+  </view>
+
+  <view class="card form-card">
+    <block wx:for="{{fields}}" wx:key="key">
+      <view class="field">
+        <text class="label">{{item.label}}</text>
+        <input class="input" data-key="{{item.key}}" value="{{form[item.key]}}" placeholder="{{item.placeholder}}" bindinput="onInput" />
+      </view>
+    </block>
+
+    <view class="field">
+      <text class="label">不可接受项 / 风险底线</text>
+      <textarea class="textarea" data-key="redLines" value="{{form.redLines}}" placeholder="例如学费上限、不能接受地区、专业禁区、身体限制等" bindinput="onInput" />
+    </view>
+
+    <view class="field">
+      <text class="label">学生偏好与家庭约束</text>
+      <textarea class="textarea" data-key="preferences" value="{{form.preferences}}" placeholder="学生兴趣、家长期望、是否愿意出省、升学/就业倾向等" bindinput="onInput" />
+    </view>
+
+    <button class="primary-button" bindtap="saveDraft">保存草稿</button>
+    <button class="secondary-button" bindtap="copyPrompt">复制分析提示词</button>
+  </view>
+</view>

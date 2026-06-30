@@ -1,0 +1,18 @@
+.hero {
+  background: linear-gradient(135deg, #13294b 0%, #1d4ed8 100%);
+  color: #ffffff;
+}
+
+.hero .p,
+.hero .li {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.intro {
+  margin-top: 18rpx;
+}
+
+.warning {
+  border: 2rpx solid #fedf89;
+  background: #fffbeb;
+}
