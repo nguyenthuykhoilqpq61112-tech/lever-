@@ -19,11 +19,11 @@ miniprogram/data/leverGaokaoSkill.js
 该文件导出：
 
 - `skillProfile`：Skill 的定位、来源说明、硬性边界、执行流程和输出结构。
-- `buildSkillPrompt(form)`：把问诊页本地草稿封装成可复制、可提交云函数的完整提示词。
+- `buildSkillPrompt(form)`：把咨询页本地草稿封装成可复制、可提交云函数的完整提示词。
 
 小程序新增 `pages/ai/ai` 页面：
 
-1. 从 `leverGaokaoIntakeDraft` 读取问诊草稿。
+1. 从 `leverGaokaoIntakeDraft` 读取咨询草稿。
 2. 展示资料完整度和缺失字段。
 3. 生成封装后的 Skill Prompt。
 4. 支持复制 Prompt。
@@ -56,7 +56,7 @@ cloudfunctions/gaokaoSkill/index.js
 
 ## 安全边界
 
-- 当前小程序仍应默认 local-first：问诊草稿只保存在用户本机。
+- 当前小程序仍应默认 local-first：咨询草稿只保存在用户本机。
 - 云函数调用模型时，用户填写的分数、位次、偏好和家庭约束会发送到后端及模型服务；正式开启前必须更新隐私政策。
 - 不要在前端暴露任何模型 API Key。
 - 不要把 AI 输出当作录取保证；正式填报仍需省级考试院、高校招生网、招生章程和官方志愿系统复核。

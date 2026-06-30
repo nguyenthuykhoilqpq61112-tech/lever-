@@ -95,7 +95,7 @@ python3 lever-gaokao/scripts/ledger_tool.py validate-candidate-table candidates.
 
 ### 4. 低门槛小程序入口
 
-仓库已提供一个轻量微信小程序壳工程，适合把问诊资料收集、使用边界说明和提示词复制交给不熟悉 Agent 工具的用户。
+仓库已提供一个轻量微信小程序壳工程，适合把咨询资料收集、使用边界说明和提示词复制交给不熟悉 Agent 工具的用户。
 
 ```text
 miniprogram/

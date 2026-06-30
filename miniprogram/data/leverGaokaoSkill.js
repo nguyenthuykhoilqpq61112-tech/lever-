@@ -2,9 +2,9 @@ const skillProfile = {
   id: 'lever-gaokao-mini-skill',
   name: 'Lever-GaoKao 小程序 Skill',
   version: '0.2.0',
-  purpose: '把高考志愿填报视为一次受约束的人生杠杆配置，先问诊、先核验政策和官方资料，再输出可讨论的候选方向、风险清单和待核验事项。',
+  purpose: '把高考志愿填报视为一次受约束的人生杠杆配置，先咨询收集资料、先核验政策和官方资料，再输出可讨论的候选方向、风险清单和待核验事项。',
   sourceNotes: [
-    '基于本仓库 lever-gaokao/SKILL.md 的问诊、低估机会扫描、第一性原理审查和风险边界。',
+    '基于本仓库 lever-gaokao/SKILL.md 的咨询收集、低估机会扫描、第一性原理审查和风险边界。',
     '参考 gaokao-advisor 的政策优先、场景识别、分数/位次数据检索和报告生成思路。'
   ],
   requiredFields: [

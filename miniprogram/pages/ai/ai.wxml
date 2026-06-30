@@ -9,7 +9,7 @@
     <view class="h2">当前资料完整度</view>
     <view class="p">已填写 {{filledCount}} / {{totalCount}} 项。缺少位次、选科、批次或不可接受项时，只能做粗筛。</view>
     <view class="missing" wx:if="{{missingFields.length}}">缺失：{{missingFieldsText}}</view>
-    <button class="secondary-button" bindtap="goIntake">返回问诊页补充</button>
+    <button class="secondary-button" bindtap="goIntake">返回咨询页补充</button>
   </view>
 
   <view class="card">

@@ -57,6 +57,8 @@ def validate_app_pages() -> None:
     tab_items = app_config.get("tabBar", {}).get("list", [])
     tab_paths = [item.get("pagePath") for item in tab_items]
     assert tab_paths == pages, "tabBar paths must match app.json pages"
+    tab_texts = [item.get("text") for item in tab_items]
+    assert "咨询" in tab_texts, "intake tab should use the user-facing label 咨询"
 
     for page in pages:
         page_base = MINIPROGRAM / page
@@ -84,6 +86,8 @@ def validate_privacy_and_handoff_copy() -> None:
     require_text(MINIPROGRAM / "pages/disclaimer/disclaimer.wxml", "敏感信息")
     require_text(MINIPROGRAM / "data/leverGaokaoSkill.js", "buildSkillPrompt")
     require_text(MINIPROGRAM / "pages/ai/ai.js", "wx.cloud.callFunction")
+    require_text(MINIPROGRAM / "pages/intake/intake.wxml", "基础咨询")
+    require_text(MINIPROGRAM / "pages/index/index.wxml", "开始咨询")
 
 
 def validate_docs() -> None:
