@@ -40,6 +40,7 @@ def validate_core_files() -> None:
         "project.config.json",
         "sitemap.json",
         "README.md",
+        "config/env.js",
     ]:
         require_file(MINIPROGRAM / relative_path)
 
@@ -86,6 +87,8 @@ def validate_privacy_and_handoff_copy() -> None:
     require_text(MINIPROGRAM / "pages/disclaimer/disclaimer.wxml", "敏感信息")
     require_text(MINIPROGRAM / "data/leverGaokaoSkill.js", "buildSkillPrompt")
     require_text(MINIPROGRAM / "pages/ai/ai.js", "wx.cloud.callFunction")
+    require_text(MINIPROGRAM / "pages/ai/ai.js", "enableCloud")
+    require_text(MINIPROGRAM / "config/env.js", "cloudEnvId")
     require_text(MINIPROGRAM / "pages/intake/intake.wxml", "基础咨询")
     require_text(MINIPROGRAM / "pages/index/index.wxml", "开始咨询")
 
@@ -97,6 +100,8 @@ def validate_docs() -> None:
     require_text(ROOT / "docs/miniprogram-deployment.md", "不要在前端小程序内暴露任何模型 API Key")
     require_text(ROOT / "docs/skill-ai-integration.md", "微信小程序 AI 接入文档")
     require_text(ROOT / "cloudfunctions/gaokaoSkill/index.js", "OPENAI_API_KEY")
+    require_text(ROOT / "cloudfunctions/gaokaoSkill/.env.example", "OPENAI_API_KEY")
+    require_text(ROOT / "docs/skill-ai-integration.md", "直接调用模型的最小配置")
 
 
 def main() -> None:

@@ -1,3 +1,9 @@
+const cloudConfig = require('./config/env')
+
+App({
+  onLaunch() {
+    const { enableCloud, cloudEnvId } = cloudConfig
+    if (wx.cloud && enableCloud && cloudEnvId) {
 App({
   onLaunch() {
     const { cloudEnvId } = this.globalData
@@ -12,6 +18,7 @@ App({
   globalData: {
     appName: 'Lever-GaoKao',
     intakeStorageKey: 'leverGaokaoIntakeDraft',
+    cloudConfig
     cloudEnvId: ''
   globalData: {
     appName: 'Lever-GaoKao',

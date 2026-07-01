@@ -49,8 +49,20 @@ Page({
   },
 
   runCloudSkill() {
+    const { enableCloud, cloudEnvId } = app.globalData.cloudConfig || {}
     if (!wx.cloud) {
       wx.showToast({ title: '需基础库支持云开发', icon: 'none' })
+      return
+    }
+
+    if (!enableCloud || !cloudEnvId) {
+      this.setData({
+        result: [
+          'AI 云函数尚未启用。',
+          '请先在 miniprogram/config/env.js 中设置 enableCloud=true 和真实 cloudEnvId。',
+          '然后部署 cloudfunctions/gaokaoSkill，并在云函数环境变量中配置 OPENAI_API_KEY。'
+        ].join('\n')
+      })
       return
     }
 

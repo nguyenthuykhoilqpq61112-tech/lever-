@@ -48,6 +48,23 @@ cloudfunctions/gaokaoSkill/index.js
 ## 部署步骤
 
 1. 在微信开发者工具中开通云开发环境。
+2. 修改 `miniprogram/config/env.js`：把 `enableCloud` 设为 `true`，并把 `cloudEnvId` 改为真实云开发环境 ID。
+3. 在开发者工具中右键 `cloudfunctions/gaokaoSkill`，安装依赖并上传部署。
+4. 参考 `cloudfunctions/gaokaoSkill/.env.example`，在云函数配置中添加模型环境变量，不要把 API Key 写入仓库或小程序前端。
+5. 打开小程序 `AI` tab，先复制 Prompt 验证内容，再点击“调用云函数分析”测试后端链路。
+6. 正式上线前，确认隐私政策、免责声明、官方资料核验说明和数据删除机制符合真实功能。
+
+
+## 直接调用模型的最小配置
+
+要让小程序里的 `AI` tab 直接调用模型，至少需要三处配置同时完成：
+
+1. `miniprogram/config/env.js`：`enableCloud=true` 且 `cloudEnvId` 为真实云开发环境 ID。
+2. `cloudfunctions/gaokaoSkill`：已在微信开发者工具中安装依赖并上传部署。
+3. 云函数环境变量：已设置 `OPENAI_API_KEY`，并按需设置 `OPENAI_BASE_URL`、`OPENAI_MODEL`。
+
+如果任一项缺失，AI 页会提示先完成云函数和模型环境变量配置，不会把 API Key 放到小程序前端。
+
 2. 把 `miniprogram/app.js` 中 `cloudEnvId` 改为真实云开发环境 ID。
 3. 在开发者工具中右键 `cloudfunctions/gaokaoSkill`，安装依赖并上传部署。
 4. 在云函数配置中添加模型环境变量，不要把 API Key 写入仓库或小程序前端。
