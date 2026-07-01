@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="card">
+    <text class="badge">使用边界</text>
+    <view class="h1">不替代官方系统，也不承诺录取</view>
+    <view class="p">本项目适合作为讨论底稿、核验清单和家庭沟通辅助。正式填报前，必须以省级考试院、高校招生网、招生章程和官方志愿系统为准。</view>
+  </view>
+
+  <view class="card">
+    <view class="h2">不能这样用</view>
+    <view class="li">• 只给省份和分数就要求直接拍板。</view>
+    <view class="li">• 把历史分数线、第三方概率或 AI 建议当作录取保证。</view>
+    <view class="li">• 上传身份证号、准考证号、手机号、完整住址等敏感信息。</view>
+    <view class="li">• 将本项目包装成商业志愿填报服务或付费交付。</view>
+  </view>
+
+  <view class="card">
+    <view class="h2">正式填报前请核验</view>
+    <view class="li">• 当年招生计划、专业组、选科要求、学费和培养地点。</view>
+    <view class="li">• 省控线、一分一段、投档线、征集志愿和最新招生章程。</view>
+    <view class="li">• 调剂规则、转专业政策、身体限制、单科要求和中外合作条款。</view>
+  </view>
+</view>

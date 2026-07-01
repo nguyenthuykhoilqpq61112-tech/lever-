@@ -1,0 +1,3 @@
+.card:first-child {
+  border: 2rpx solid #b2ddff;
+}

@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="card">
+    <text class="badge">Skill 封装</text>
+    <view class="h1">AI 分析草稿</view>
+    <view class="p">把本仓库 Lever-GaoKao Skill 封装成小程序提示词。可直接复制，也可在配置云函数后调用后端模型。</view>
+  </view>
+
+  <view class="card">
+    <view class="h2">当前资料完整度</view>
+    <view class="p">已填写 {{filledCount}} / {{totalCount}} 项。缺少位次、选科、批次或不可接受项时，只能做粗筛。</view>
+    <view class="missing" wx:if="{{missingFields.length}}">缺失：{{missingFieldsText}}</view>
+    <button class="secondary-button" bindtap="goIntake">返回咨询页补充</button>
+  </view>
+
+  <view class="card">
+    <view class="h2">封装后的 Skill Prompt</view>
+    <textarea class="prompt" value="{{prompt}}" disabled />
+    <button class="primary-button" bindtap="copyPrompt">复制 Prompt</button>
+    <button class="secondary-button" bindtap="runCloudSkill" loading="{{loading}}">调用云函数分析</button>
+  </view>
+
+  <view class="card" wx:if="{{result}}">
+    <view class="h2">分析结果</view>
+    <text class="result">{{result}}</text>
+  </view>
+</view>
