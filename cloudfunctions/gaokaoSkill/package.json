@@ -1,0 +1,9 @@
+{
+  "name": "gaokao-skill-cloudfunction",
+  "version": "0.1.0",
+  "description": "Cloud function wrapper for 高考志愿咨询助手 mini-program skill prompts.",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "latest"
+  }
+}

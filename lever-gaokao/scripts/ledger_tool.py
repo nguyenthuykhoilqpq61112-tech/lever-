@@ -892,7 +892,7 @@ def command_selftest(args: argparse.Namespace) -> int:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Lever-GaoKao 候选池 ledger 确定性辅助工具")
+    parser = argparse.ArgumentParser(description="高考志愿咨询助手 候选池 ledger 确定性辅助工具")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     selftest = subparsers.add_parser("selftest", help="运行脚本标准库自检")

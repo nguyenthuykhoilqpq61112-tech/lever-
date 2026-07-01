@@ -1,22 +1,21 @@
-# Lever-GaoKao - 高考志愿填报智能体
+# 高考志愿咨询助手
 
 <p align="center">
-  <em>Life Leverage for College Admission</em><br>
-  <strong>人生杠杆・高考志愿填报 Agent</strong>
+  <strong>高考志愿填报咨询辅助工具</strong>
 </p>
 
 <p align="center">
   <a href="#怎么开始">快速开始</a> ·
   <a href="#选择哲学">选择哲学</a> ·
   <a href="#它怎么工作">工作方式</a> ·
-  <a href="#源码开放但非商用">非商用许可</a>
+  <a href="#许可与使用边界">许可与边界</a>
 </p>
 
 <p align="center">
-  <img src="docs/assets/imagegen/cover.png" alt="Lever-GaoKao 封面：人生杠杆・高考志愿填报 Agent" width="100%">
+  <img src="docs/assets/imagegen/cover.png" alt="高考志愿填报咨询辅助工具封面" width="100%">
 </p>
 
-`Lever-GaoKao` 是一个**AI Agent高考志愿填报辅助项目**。
+本项目是一个**AI 高考志愿填报咨询辅助项目**。
 
 它做三件事：
 - 先问清孩子和家庭的真实情况，
@@ -33,7 +32,7 @@
 
 ## 它和普通志愿工具有什么不一样
 
-`Lever-GaoKao` 更像一个**高考志愿低估机会发现器**。
+本项目更像一个**高考志愿低估机会发现器**。
 
 它不是帮你追最热的城市、最热的专业，也不是只按历史分数线做机械匹配。它更关心：在这个分数、位次、家庭条件和个人意愿下，哪里还有被大多数人忽略、但长期可能更有价值的选择。
 
@@ -47,7 +46,7 @@
 
 项目来自本人在2025年真实的高考志愿填报实践：
 - **考生情况**：家中晚辈：1名选择空间不宽的考生（高竞争省份/超低本科录取率，中位数成绩/正常报考只能读本省末流公办本科），需要在省内热门选择和全国范围的低估机会之间做取舍。
-- **实践过程**：我用 AI Agent 辅助整理了数百个候选学校和专业方向，反复比较、排除、复核，最终选择了一个录取把握较稳、长期机会也不错的方案，在分数有限、资源有限的基础上，尽可能为考生选择有利于改变人生命运的志愿填报和入学之后的学业+职业生涯组合方案。
+- **实践过程**：我用 AI 工具 辅助整理了数百个候选学校和专业方向，反复比较、排除、复核，最终选择了一个录取把握较稳、长期机会也不错的方案，在分数有限、资源有限的基础上，尽可能为考生选择有利于改变人生命运的志愿填报和入学之后的学业+职业生涯组合方案。
 - **最终结果**：是被位于国内某一线城市外围的一所公办本科高校录取。由于特殊的入学时机，该校在考生入学后不到半年就完成了**院校合并、更名、学院->大学的档次提升**，从普通公办本科升档为值得重点关注的发展机会型中央部委直属院校。
 - **后续现状**：并在就读期间积极寻求转专业/交换生/保研/考研机会，进一步提升人生跃迁机会和发展的杠杆率。
 
@@ -59,7 +58,7 @@
 - 中位分段、本科压线、本专科临界，或几分就可能影响学校层级的尴尬分段考生。
 - 希望在可承受风险内寻找低估机会、升学跳板、行业特色学校或后续跃迁入口的人。
 - 高考考生、家长、老师和公益志愿填报协助者。
-- 会使用 Codex、Claude Code、Cursor、Kimi Code、OpenCode、Gemini CLI、Qwen Code、Aider、Cline/Roo Code、Continue、Zed/Zcoe、Windsurf、GitHub Copilot Coding Agent、Trae 等工具的人。
+- 会使用免费的国产 AI 工具或本地开源工具，例如 DeepSeek、Kimi、通义千问、智谱清言、豆包、Qwen CLI、Ollama 等（以各平台当前免费额度和服务条款为准）的人。
 - 不想只听“热门城市 + 热门专业 + 一个标准答案”，希望把选择讲清楚、想明白的人。
 
 如果孩子分数很高、选择空间很宽，也不能只问“我喜欢哪个”。这时更要比较强学科、热门专业是否过热、同层次替代和入学后的发展节点。只是它最擅长、最容易产生差异化价值的地方，仍然是帮选择机会有限的考生把被低估的可能性找出来，再把代价和退路讲清楚。
@@ -72,15 +71,15 @@
 
 只给“省份 + 分数”时，只能先粗看。最好补上位次、选科、批次和不能接受的学校/地区/专业。
 
-### 2. 会用 Agent 工具的人这样做
+### 2. 会用免费国产 AI 工具的人这样做
 
-Codex 用户可以使用：
+可在 DeepSeek、Kimi、通义千问、智谱清言、豆包等免费国产 AI 工具中使用：
 
 ```text
-请使用 $lever-gaokao，先问清资料，再为一名中国高考考生生成有依据、讲风险、兼顾长期机会的志愿填报建议。
+请先问清资料，再为一名中国高考考生生成有依据、讲风险、兼顾长期机会的志愿填报建议。
 ```
 
-其他 Agent 工具可以先读取 [Skill 入口](lever-gaokao/SKILL.md)，再按需要读取 `references/`。不要一次性把所有文档塞进去。
+如果工具支持本地文件读取，可以先读取 [Skill 入口](lever-gaokao/SKILL.md)，再按需要读取 `references/`。不要一次性把所有文档塞进去。
 
 ### 3. 有表格时跑机械校验
 
@@ -92,9 +91,20 @@ python3 lever-gaokao/scripts/ledger_tool.py validate-candidate-table candidates.
 
 脚本只检查表格字段、状态和明显硬限制，不判断学校好坏，也不预测录取概率。
 
+
+### 4. 低门槛小程序入口
+
+仓库已提供一个轻量微信小程序壳工程，适合把咨询资料收集、使用边界说明和提示词复制交给不熟悉 AI 工具的用户。
+
+```text
+miniprogram/
+```
+
+使用微信开发者工具导入 `miniprogram/` 目录即可本地预览；完整上线步骤见 [微信小程序部署指南](docs/miniprogram-deployment.md)。如需把 Skill 接入小程序 AI 页和云函数，见 [Skill 封装与微信 AI 接入说明](docs/skill-ai-integration.md)。正式发布前请结合主体资质、隐私政策和微信平台规范补齐发布材料。
+
 ## 没有网络代理怎么办
 
-可以使用支持本地文件读取、工具调用或自定义模型 API 的国产/开源 Agent 工具。国内模型可考虑 GLM、DeepSeek、Kimi、Qwen 等。常见做法是选择支持 OpenAI-compatible 接口的工具，再配置 `base_url`、`api_key` 和 `model`。
+可以优先使用免费的国产 AI 工具，或支持本地文件读取、工具调用、自定义模型 API 的国产/开源工具。国内模型可考虑 DeepSeek、Kimi、通义千问、智谱清言、豆包、Qwen 等；若使用 OpenAI-compatible 接口，再配置 `base_url`、`api_key` 和 `model`。
 
 如果只能使用网页聊天，也可以复制 [SKILL.md](lever-gaokao/SKILL.md)、[引导式问诊](lever-gaokao/references/guided-intake.md) 和 [输入输出规范](lever-gaokao/references/input-output-schema.md) 的相关片段，让模型先问问题，再做分析。这样也能用上方法论，只是不能自动检查候选表。
 
@@ -133,38 +143,19 @@ python3 lever-gaokao/scripts/ledger_tool.py validate-candidate-table candidates.
 - 不要把第三方工具的概率当成官方录取保证。
 - 不要把本项目给出的梯度、把握等级或候选方案当作强概率预测。
 - 不要上传身份证号、准考证号、手机号、完整住址等敏感信息。
-- 不要让商业志愿填报机构把本项目包装成付费服务。
 - 不要把“升格、合并、更名、捡漏、热门 AI 专业”当作确定收益。
 
 ## 后续规划
 
-我正在继续探索：如何把这套志愿填报参考机制和 AI Agent 能力，更低门槛地提供给普通家庭、偏远地区、以及来自高考录取竞争烈度较高省份的学生和家长。
+我正在继续探索：如何把这套志愿填报参考机制和 AI 工具 能力，更低门槛地提供给普通家庭、偏远地区、以及来自高考录取竞争烈度较高省份的学生和家长。
 
 如果你有更好的公益合作、数据建设、工具落地或使用传播建议，欢迎联系我。
 
-## 支持项目
+## 许可与使用边界
 
-<!-- SUPPORT-PROJECT:START -->
-如果这个项目对你有帮助，可以自愿赞赏支持后续维护。赞赏不是付费咨询服务，也不构成任何结果承诺；请不要在转账备注中填写姓名、手机号、证件号等敏感信息。
+本仓库内容的许可、免责声明和使用边界以 [LICENSE](LICENSE)、[NONCOMMERCIAL.md](NONCOMMERCIAL.md) 和 [DISCLAIMER.md](DISCLAIMER.md) 为准。
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/XucroYuri/lever-gaokao/main/docs/assets/sponsor/alipay-card.png" alt="支付宝赞助二维码" width="260">
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/XucroYuri/lever-gaokao/main/docs/assets/sponsor/wechat-reward-card.png" alt="微信赞赏二维码" width="260">
-</p>
-
-<p align="center"><strong>时不我待，功不唐捐</strong></p>
-<!-- SUPPORT-PROJECT:END -->
-
-## 源码开放但非商用
-
-本项目是公益导向的“源码开放、非商用”项目，不是 OSI 定义下的无限制开源项目。
-
-- 文档、Skill、方法论和模板：采用 [CC BY-NC-SA 4.0](LICENSES/CC-BY-NC-SA-4.0.txt)。
-- 脚本代码：采用 [PolyForm Noncommercial 1.0.0](LICENSES/PolyForm-Noncommercial-1.0.0.md)。
-
-特别声明：
-- 基于公益性目的，本项目禁止用于：商业志愿填报咨询机构、教育咨询公司、SaaS 平台、付费知识产品、内部商业工具和其他营利性服务，不得基于本项目进行二次开发、集成、训练、包装或付费交付，除非获得项目维护者的单独书面授权。详见 [LICENSE](LICENSE)、[NONCOMMERCIAL.md](NONCOMMERCIAL.md) 和 [DISCLAIMER.md](DISCLAIMER.md)。
+小程序上架和对外展示时，请优先使用面向用户的功能说明、隐私说明和免责声明；不要把许可原文、开发者说明或内部维护说明直接作为小程序页面文案。
 
 ## 贡献
 

@@ -107,7 +107,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 scripts/ledger_tool.py selftest
 - `--exclude-region`：排除地区关键词，可重复。
 - `--unacceptable-major-keyword`：不可接受专业关键词，可重复。
 
-命中硬约束的候选会被标记为 `剔除`，并写入 `downgrade_reason` 和 `review_role=filter-candidates`。脚本不判断学校质量或人生杠杆。
+命中硬约束的候选会被标记为 `剔除`，并写入 `downgrade_reason` 和 `review_role=filter-candidates`。脚本不判断学校质量或长期发展机会。
 
 ### merge-ledgers
 
