@@ -65,6 +65,12 @@ cloudfunctions/gaokaoSkill/index.js
 
 如果任一项缺失，AI 页会提示先完成云函数和模型环境变量配置，不会把 API Key 放到小程序前端。
 
+2. 把 `miniprogram/app.js` 中 `cloudEnvId` 改为真实云开发环境 ID。
+3. 在开发者工具中右键 `cloudfunctions/gaokaoSkill`，安装依赖并上传部署。
+4. 在云函数配置中添加模型环境变量，不要把 API Key 写入仓库或小程序前端。
+5. 打开小程序 `AI` tab，先复制 Prompt 验证内容，再点击“调用云函数分析”测试后端链路。
+6. 正式上线前，确认隐私政策、免责声明、官方资料核验说明和数据删除机制符合真实功能。
+
 ## 安全边界
 
 - 当前小程序仍应默认 local-first：咨询草稿只保存在用户本机。
